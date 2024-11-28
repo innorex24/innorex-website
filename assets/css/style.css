@@ -1,0 +1,112 @@
+/* Couleurs principales */
+:root {
+    --primary-color: #d22831; /* Rouge vif */
+    --secondary-color: #011b70; /* Bleu profond */
+    --background-color: #ffffff; /* Blanc */
+    --text-color: #000000; /* Noir */
+}
+
+/* Corps de la page */
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête */
+header {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    padding: 10px 0;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.nav-link {
+    color: var(--background-color);
+    transition: color 0.3s ease-in-out;
+}
+
+.nav-link:hover {
+    color: var(--primary-color);
+}
+
+/* Section héros */
+.hero {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.2rem;
+}
+
+.hero a {
+    background-color: var(--background-color);
+    color: var(--primary-color);
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.hero a:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Services */
+.services h2 {
+    color: var(--primary-color);
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.card {
+    border: none;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.card-title {
+    color: var(--secondary-color);
+}
+
+.card-text {
+    color: var(--text-color);
+}
+
+/* Pied de page */
+footer {
+    background-color: var(--secondary-color);
+    color: var(--background-color);
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

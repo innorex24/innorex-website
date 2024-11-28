@@ -1,0 +1,37 @@
+backend:
+  name: git-gateway
+  branch: main  # Branche à utiliser
+
+media_folder: "assets/images"
+public_folder: "/images"
+
+collections:
+  - name: "pages"
+    label: "Pages"
+    folder: "content/pages"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "projects"
+    label: "Projets"
+    folder: "content/projects"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre du Projet", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Date", name: "date", widget: "datetime" }
+
+  - name: "careers"
+    label: "Carrières"
+    folder: "content/careers"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Poste", name: "job_title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Date de publication", name: "publish_date", widget: "datetime" }
