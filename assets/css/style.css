@@ -1,12 +1,77 @@
 /* Couleurs principales */
 :root {
-    --primary-color: #d22831; /* Rouge vif */
-    --secondary-color: #011b70; /* Bleu profond */
+    --primary-color: #d22831; /* Rouge */
+    --secondary-color: #011b70; /* Bleu */
     --background-color: #ffffff; /* Blanc */
     --text-color: #000000; /* Noir */
 }
 
-/* Corps de la page */
+/* Style de la navbar */
+.navbar-custom {
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color)); /* Dégradé entre rouge et bleu */
+    color: var(--background-color); /* Texte blanc */
+}
+
+/* Liens de la navbar */
+.navbar-custom .navbar-nav .nav-link {
+    color: var(--background-color); /* Texte blanc */
+    font-weight: bold;
+    text-transform: uppercase; /* Majuscules pour les liens */
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Survol des liens dans la navbar */
+.navbar-custom .navbar-nav .nav-link:hover {
+    background-color: var(--secondary-color); /* Fond bleu au survol */
+    color: var(--background-color); /* Texte blanc au survol */
+}
+
+/* Lien actif */
+.navbar-custom .navbar-nav .nav-link.active {
+    color: var(--primary-color); /* Texte rouge quand actif */
+    background-color: var(--background-color); /* Fond blanc quand actif */
+}
+
+/* Style du logo */
+.navbar-custom .navbar-brand {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--background-color); /* Texte blanc pour la marque */
+    text-transform: uppercase;
+}
+
+/* Conteneur du logo */
+.logo-container {
+    background-color: var(--background-color); /* Fond blanc pour le logo */
+    border-radius: 50%; /* Cercle */
+    padding: 10px;
+    display: inline-block;
+    text-align: center;
+}
+
+/* Image du logo */
+.logo-img {
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+/* Menu déroulant (si utilisé) */
+.navbar-custom .dropdown-menu {
+    background: var(--secondary-color); /* Fond bleu pour le menu déroulant */
+}
+
+.navbar-custom .dropdown-item {
+    color: var(--background-color); /* Texte blanc dans le menu déroulant */
+}
+
+/* Survol des éléments du menu déroulant */
+.navbar-custom .dropdown-item:hover {
+    background-color: var(--primary-color); /* Fond rouge au survol */
+    color: var(--background-color); /* Texte blanc au survol */
+}
+
+/* Section principale */
 body {
     font-family: 'Roboto', sans-serif;
     color: var(--text-color);
@@ -15,86 +80,46 @@ body {
     padding: 0;
 }
 
-/* En-tête */
 header {
-    background-color: var(--secondary-color);
-    color: var(--background-color);
-    padding: 10px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Légère ombre */
+    padding-bottom: 10px;
 }
 
-.navbar-brand {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--primary-color);
-}
-
-.nav-link {
-    color: var(--background-color);
-    transition: color 0.3s ease-in-out;
-}
-
-.nav-link:hover {
-    color: var(--primary-color);
-}
-
-/* Section héros */
 .hero {
-    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
     color: var(--background-color);
-    padding: 60px 20px;
+    padding: 80px 20px;
     text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .hero h1 {
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
 .hero p {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    margin-bottom: 30px;
 }
 
 .hero a {
     background-color: var(--background-color);
     color: var(--primary-color);
-    padding: 10px 20px;
-    border-radius: 5px;
+    padding: 12px 25px;
+    border-radius: 30px;
     text-decoration: none;
+    font-weight: bold;
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .hero a:hover {
     transform: scale(1.1);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
-/* Services */
-.services h2 {
-    color: var(--primary-color);
-    margin-bottom: 40px;
-    text-align: center;
-}
-
-.card {
-    border: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-}
-
-.card-title {
-    color: var(--secondary-color);
-}
-
-.card-text {
-    color: var(--text-color);
-}
-
-/* Pied de page */
+/* Footer */
 footer {
     background-color: var(--secondary-color);
     color: var(--background-color);
@@ -105,6 +130,7 @@ footer {
 footer a {
     color: var(--primary-color);
     text-decoration: none;
+    font-weight: bold;
 }
 
 footer a:hover {

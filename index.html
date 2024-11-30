@@ -6,7 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Innorex - Travaux Spéciaux, Rénovation et Construction</title>
-
+    
+    <!-- Lien vers les styles responsives pour le mobile -->
+    <link rel="stylesheet" href="assets/css/responsive.css">
+    
     <!-- Bootstrap CSS -->
     <!-- Lien vers la feuille de style de Bootstrap 5 pour le design réactif -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEJ6H2nF+zT8xjzLzR1ovCZL9qDRw7Bd52VjDmu13BrKwSvlXwQW8l8zUoTfd2" crossorigin="anonymous">
@@ -16,9 +19,6 @@
 
     <!-- Feuille de style personnalisée pour l'apparence du site -->
     <link rel="stylesheet" href="assets/css/style.css">
-
-    <!-- Lien vers les styles responsives pour le mobile -->
-    <link rel="stylesheet" href="assets/css/responsive.css">
 
     <!-- Google Fonts pour la police Roboto -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
@@ -49,9 +49,14 @@
 <body>
     <!-- En-tête -->
     <header class="bg-light shadow-sm">
-      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #007bff;">
+      <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#011b70 ;">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../index.html">Innorex</a>
+            <a class="navbar-brand" href="index.html">
+              <div class="logo-container">
+                <img src="assets/images/logo.png" alt="Innorex Logo" class="logo-img">
+              </div>
+            </a>
+
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -126,51 +131,52 @@
 
     <!-- Section principale -->
     <main>
-        <!-- Section héros -->
-        <section class="hero bg-primary text-white text-center py-5">
-            <div class="container">
-                <h1 class="display-4">Bienvenue chez Innorex</h1>
-                <p class="lead">Des solutions sur mesure pour vos projets de rénovation et de construction.</p>
-                <a href="about.html" class="btn btn-light btn-lg">En savoir plus</a>
-            </div>
-        </section>
+    <!-- Section héros -->
+    <section class="hero bg-primary text-white text-center py-5">
+        <div class="container">
+            <h1 class="display-4">Bienvenue chez Innorex</h1>
+            <p class="lead">Des solutions sur mesure pour vos projets de rénovation et de construction.</p>
+            <a href="about.html" class="btn btn-light btn-lg">En savoir plus</a>
+        </div>
+    </section>
 
-        <!-- Section services -->
-        <section class="services py-5">
-            <div class="container">
-                <h2 class="text-center text-primary mb-4">Nos Services</h2>
-                <div class="row g-4">
-                    <div class="col-md-4">
-                        <div class="card shadow-sm">
-                            <img src="assets/images/project1.jpg" class="card-img-top" alt="Étanchéité">
-                            <div class="card-body">
-                                <h3 class="card-title">Étanchéité et Cuvelage</h3>
-                                <p class="card-text">Protéger vos structures contre les infiltrations d'eau.</p>
-                            </div>
+    <!-- Section services -->
+    <section class="services py-5">
+        <div class="container">
+            <h2 class="text-center text-primary mb-4">Nos Services</h2>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/images/project1.jpg" class="card-img-top" alt="Étanchéité">
+                        <div class="card-body">
+                            <h3 class="card-title">Étanchéité et Cuvelage</h3>
+                            <p class="card-text">Protéger vos structures contre les infiltrations d'eau.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm">
-                            <img src="assets/images/project1.jpg" class="card-img-top" alt="Réparations">
-                            <div class="card-body">
-                                <h3 class="card-title">Réparations et Renforts</h3>
-                                <p class="card-text">Prolonger la vie de vos bâtiments avec des réparations ciblées.</p>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/images/project1.jpg" class="card-img-top" alt="Réparations">
+                        <div class="card-body">
+                            <h3 class="card-title">Réparations et Renforts</h3>
+                            <p class="card-text">Prolonger la vie de vos bâtiments avec des réparations ciblées.</p>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card shadow-sm">
-                            <img src="assets/images/project1.jpg" class="card-img-top" alt="Travaux Spéciaux">
-                            <div class="card-body">
-                                <h3 class="card-title">Travaux Spéciaux</h3>
-                                <p class="card-text">Des solutions sur mesure pour vos projets les plus complexes.</p>
-                            </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <img src="assets/images/project1.jpg" class="card-img-top" alt="Travaux Spéciaux">
+                        <div class="card-body">
+                            <h3 class="card-title">Travaux Spéciaux</h3>
+                            <p class="card-text">Des solutions sur mesure pour vos projets les plus complexes.</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+      </section>
     </main>
+
 
     <!-- Footer -->
     <footer class="bg-dark text-white py-4">

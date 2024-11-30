@@ -1,37 +1,73 @@
 backend:
-  name: git-gateway
-  branch: main  # Branche à utiliser
+  name: git-gateway  # Utilise Git Gateway pour l'authentification via Netlify Identity
+  branch: main  # Branche principale à utiliser
 
-media_folder: "assets/images"
-public_folder: "/images"
+media_folder: "assets/images"  # Dossier où les images seront stockées dans le dépôt
+public_folder: "/assets/images"  # Chemin d'accès public pour les images
 
 collections:
-  - name: "pages"
+  - name: "pages"  # Collection des pages du site (par exemple, Accueil, À propos)
     label: "Pages"
-    folder: "content/pages"
-    create: true
-    slug: "{{slug}}"
+    folder: "pages"  # Dossier où les pages sont stockées
+    create: true  # Permet la création de nouvelles pages
+    slug: "{{slug}}"  # Gère le slug des pages (par exemple, la page d'accueil aura "accueil" comme slug)
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }  # Champ pour le titre de la page
+      - { label: "Contenu", name: "body", widget: "markdown" }  # Corps de la page (en Markdown)
+
+  - name: "posts"  # Collection des articles de blog
+    label: "Articles de Blog"
+    folder: "posts"  # Dossier des articles dans votre projet
+    create: true  # Permet de créer de nouveaux articles
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"  # Format du slug pour les articles
     fields:
       - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }  # Date de publication de l'article
       - { label: "Contenu", name: "body", widget: "markdown" }
 
-  - name: "projects"
+  - name: "projets"  # Collection pour les projets (par exemple, des études de cas)
     label: "Projets"
-    folder: "content/projects"
-    create: true
-    slug: "{{slug}}"
+    folder: "projets"  # Dossier des projets dans votre dépôt
+    create: true  # Permet de créer de nouveaux projets
+    slug: "{{slug}}"  # Slug des projets
     fields:
-      - { label: "Titre du Projet", name: "title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Image", name: "image", widget: "image" }
-      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Nom du projet", name: "title", widget: "string" }  # Titre du projet
+      - { label: "Description", name: "description", widget: "markdown" }  # Description du projet
+      - { label: "Image du projet", name: "image", widget: "image" }  # Image associée au projet
+      - { label: "Date du projet", name: "date", widget: "datetime" }  # Date de réalisation
 
-  - name: "careers"
-    label: "Carrières"
-    folder: "content/careers"
-    create: true
-    slug: "{{slug}}"
+  - name: "partenaires"  # Collection pour les partenaires
+    label: "Partenaires"
+    folder: "partenaires"  # Dossier des partenaires dans votre projet
+    create: true  # Permet de créer de nouveaux partenaires
+    slug: "{{slug}}"  # Slug des partenaires
     fields:
-      - { label: "Poste", name: "job_title", widget: "string" }
-      - { label: "Description", name: "description", widget: "text" }
-      - { label: "Date de publication", name: "publish_date", widget: "datetime" }
+      - { label: "Nom du partenaire", name: "name", widget: "string" }  # Nom du partenaire
+      - { label: "Logo", name: "logo", widget: "image" }  # Logo du partenaire
+      - { label: "URL", name: "url", widget: "string" }  # Lien vers le site du partenaire
+
+  - name: "témoignages"  # Collection pour les témoignages clients
+    label: "Témoignages"
+    folder: "temoignages"  # Dossier des témoignages dans votre projet
+    create: true  # Permet de créer de nouveaux témoignages
+    slug: "{{slug}}"  # Slug des témoignages
+    fields:
+      - { label: "Nom du client", name: "client_name", widget: "string" }  # Nom du client
+      - { label: "Témoignage", name: "testimonial", widget: "text" }  # Texte du témoignage
+      - { label: "Image du client", name: "client_image", widget: "image" }  # Photo du client
+      - { label: "Date", name: "date", widget: "datetime" }  # Date du témoignage
+
+  - name: "carrières"  # Collection pour les offres d'emplois
+    label: "Carrières"
+    folder: "carrieres"  # Dossier des offres d'emplois
+    create: true  # Permet de créer de nouvelles offres d'emplois
+    slug: "{{slug}}"  # Slug des offres d'emplois
+    fields:
+      - { label: "Poste", name: "job_title", widget: "string" }  # Titre du poste
+      - { label: "Description", name: "description", widget: "markdown" }  # Description du poste
+      - { label: "Lieu", name: "location", widget: "string" }  # Lieu du poste
+      - { label: "Date de publication", name: "publish_date", widget: "datetime" }  # Date de publication de l'offre
+
+# Paramètres des widgets pour les fichiers multimédia
+media_folder: "assets/media"  # Dossier où les médias sont stockés
+public_folder: "/assets/media"  # Chemin d'accès public pour les fichiers multimédias
